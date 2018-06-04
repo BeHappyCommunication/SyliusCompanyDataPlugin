@@ -36,7 +36,7 @@ class CompanyData implements CompanyDataInterface
     protected $siret = '';
     /** @var string */
     protected $information = '';
-    /** @var ArrayCollection|Channel[]|null */
+    /** @var ArrayCollection|ChannelInterface[]|null */
     protected $channels = null;
     
     /**
@@ -217,14 +217,10 @@ class CompanyData implements CompanyDataInterface
 
     /**
      * @param ArrayCollection|ChannelInterface[] $channels
-     *
-     * @return CompanyData
      */
-    public function setChannels(ArrayCollection $channels): self
+    public function setChannels(ArrayCollection $channels): void
     {
         $this->channels = $channels;
-
-        return $this;
     }
     
     /**
