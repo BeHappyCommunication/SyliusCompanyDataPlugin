@@ -1,94 +1,58 @@
-<p align="center">
-    <a href="http://sylius.org" target="_blank">
-        <img src="http://demo.sylius.org/assets/shop/img/logo.png" />
-    </a>
-</p>
-<h1 align="center">Plugin Skeleton</h1>
-<p align="center">
-    <a href="https://packagist.org/packages/sylius/plugin-skeleton" title="License">
-        <img src="https://img.shields.io/packagist/l/sylius/plugin-skeleton.svg" />
-    </a>
-    <a href="https://packagist.org/packages/sylius/plugin-skeleton" title="Version">
-        <img src="https://img.shields.io/packagist/v/sylius/plugin-skeleton.svg" />
-    </a>
-    <a href="http://travis-ci.org/Sylius/PluginSkeleton" title="Build status">
-        <img src="https://img.shields.io/travis/Sylius/PluginSkeleton/master.svg" />
-    </a>
-    <a href="https://scrutinizer-ci.com/g/Sylius/PluginSkeleton/" title="Scrutinizer">
-        <img src="https://img.shields.io/scrutinizer/g/Sylius/PluginSkeleton.svg" />
-    </a>
-</p>
+# sylius-company-data-plugin
+Provides a way to create datas for your selling company on Sylius.
 
-## Installation
+# Installation-procedure
+```bash
+$ composer require behappy/company-data-plugin
+```
 
-1. Run `composer create-project sylius/plugin-skeleton ProjectName`.
+## Enable the plugin
 
-2. From the plugin skeleton root directory, run the following commands:
+```php
+// in app/AppKernel.php
+public function registerBundles() {
+	$bundles = array(
+		// ...
+		new BeHappy\SyliusCompanyDataPlugin\BeHappy(),
+		...
+	);
+	// ...
+}
+```
 
-    ```bash
-    $ (cd tests/Application && yarn install)
-    $ (cd tests/Application && yarn run gulp)
-    $ (cd tests/Application && bin/console assets:install web -e test)
-    
-    $ (cd tests/Application && bin/console doctrine:database:create -e test)
-    $ (cd tests/Application && bin/console doctrine:schema:create -e test)
-    ```
+```yml
+#in app/config/config.yml
+imports:
+    ...
+    - { resource: "@BeHappySyliusCompanyDataPlugin/Resources/config/config.yml" }
+    ...
+```
 
-## Usage
+```yml
+# in routing.yml
+...
 
-### Running plugin tests
+behappy_mail_plugin:
+    resource: '@BeHappySyliusCompanyDataPlugin/Resources/config/routing.yml'
+...
+```
 
-  - PHPUnit
+## Generate database
 
-    ```bash
-    $ bin/phpunit
-    ```
+Simply launch
 
-  - PHPSpec
+```bash
+php bin/console doctrine:schema:update --dump-sql --force
+``` 
 
-    ```bash
-    $ bin/phpspec run
-    ```
 
-  - Behat (non-JS scenarios)
+# That's it !
+You now have a new entry in Admin under configuration tab : Company data
 
-    ```bash
-    $ bin/behat --tags="~@javascript"
-    ```
+There you can configure yout company(ies) data(s) in order to be used by other plugins.
 
-  - Behat (JS scenarios)
- 
-    1. Download [Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-    
-    2. Run Selenium server with previously downloaded Chromedriver:
-    
-        ```bash
-        $ bin/selenium-server-standalone -Dwebdriver.chrome.driver=chromedriver
-        ```
-    3. Run test application's webserver on `localhost:8080`:
-    
-        ```bash
-        $ (cd tests/Application && bin/console server:run 127.0.0.1:8080 -d web -e test)
-        ```
-    
-    4. Run Behat:
-    
-        ```bash
-        $ bin/behat --tags="@javascript"
-        ```
+# Thanks
+This plugin is partially inspired by BitBagCommerce/SyliusInvoicingPlugin (https://github.com/BitBagCommerce/SyliusInvoicingPlugin).
 
-### Opening Sylius with your plugin
-
-- Using `test` environment:
-
-    ```bash
-    $ (cd tests/Application && bin/console sylius:fixtures:load -e test)
-    $ (cd tests/Application && bin/console server:run -d web -e test)
-    ```
-    
-- Using `dev` environment:
-
-    ```bash
-    $ (cd tests/Application && bin/console sylius:fixtures:load -e dev)
-    $ (cd tests/Application && bin/console server:run -d web -e dev)
-    ```
+# Feel free to contribute
+You can also ask your questions at the mail address in the composer.json mentioning this package.
