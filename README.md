@@ -58,4 +58,4 @@ This plugin is partially inspired by BitBagCommerce/SyliusInvoicingPlugin (https
 You can also ask your questions at the mail address in the composer.json mentioning this package.
 
 # Other
-You can also check our other packages (including Sylius plugins at https://github.com/BeHappyCommunication )
+You can also check our other packages (including Sylius plugins) at https://github.com/BeHappyCommunication
