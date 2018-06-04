@@ -1,0 +1,6 @@
+services:
+    behappy_company_data_plugin.form.type.company_data:
+        class: BeHappy\SyliusCompanyDataPlugin\Form\Type\CompanyDataType
+        arguments: [ '%behappy_company_data_plugin.model.company_data.class%', ['behappy_company_data']]
+        tags:
+            - { name: form.type }

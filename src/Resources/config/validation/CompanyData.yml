@@ -1,0 +1,48 @@
+BeHappy\SyliusCompanyDataPlugin\Entity\CompanyData:
+    properties:
+        name:
+            - Type: string
+            - Length:
+                max: 127
+            - NotBlank:
+                groups: [ 'behappy_company_data' ]
+        addressNumber:
+            - Type: string
+            - Length:
+                max: 31
+            - NotBlank:
+                groups: [ 'behappy_company_data' ]
+        addressStreet:
+            - Type: string
+            - Length:
+                max: 255
+            - NotBlank:
+                groups: [ 'behappy_company_data' ]
+        addressStreetExtension:
+            - Type: string
+            - Length:
+                max: 255
+        addressZipCode:
+            - Type: string
+            - Length:
+                max: 15
+            - NotBlank:
+                groups: [ 'behappy_company_data' ]
+        addressCountry:
+            - Type: string
+            - Length:
+                max: 63
+            - NotBlank:
+                groups: [ 'behappy_company_data' ]
+        vatNumber:
+            - Type: string
+            - Length:
+                max: 63
+            - NotBlank:
+                groups: [ 'behappy_company_data' ]
+        siret:
+            - Type: string
+            - Length:
+                max: 63
+        information:
+            - Type: string

@@ -1,0 +1,8 @@
+sylius_resource:
+    resources:
+        behappy_company_data_plugin.company_data:
+            classes:
+                model: BeHappy\SyliusCompanyDataPlugin\Entity\CompanyData
+                interface: BeHappy\SyliusCompanyDataPlugin\Entity\CompanyDataInterface
+                repository: BeHappy\SyliusCompanyDataPlugin\Repository\CompanyDataRepository
+                form: BeHappy\SyliusCompanyDataPlugin\Form\Type\CompanyDataType

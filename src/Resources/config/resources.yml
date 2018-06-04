@@ -1,0 +1,2 @@
+imports:
+    - { resource: '@BeHappySyliusCompanyDataPlugin/Resources/config/resources/company_data.yml' }

@@ -1,0 +1,52 @@
+BeHappy\SyliusCompanyDataPlugin\Entity\CompanyData:
+    type: mappedSuperclass
+    table: behappy_company_data
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 127
+        addressNumber:
+            type: string
+            nullable: false
+            length: 31
+        addressStreet:
+            type: string
+            nullable: false
+            length: 255
+        addressStreetExtension:
+            type: string
+            nullable: true
+            length: 255
+        addressZipCode:
+            type: string
+            nullable: false
+            length: 15
+        addressCountry:
+            type: string
+            nullable: false
+            length: 63
+        vatNumber:
+            type: string
+            nullable: false
+            length: 63
+        siret:
+            type: string
+            nullable: true
+            length: 63
+        information:
+            type: text
+            nullable: true
+    manyToMany:
+        channels:
+            targetEntity: Sylius\Component\Core\Model\Channel
+            joinTable:
+                name: behappy_company_data_channel
+                joinColumns:
+                    - name: company_data
+                      referencedColumnName: id

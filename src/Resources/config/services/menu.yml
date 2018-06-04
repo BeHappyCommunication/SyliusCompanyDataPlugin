@@ -1,0 +1,5 @@
+services:
+    behappy_company_data_plugin.event_listener.company_data:
+        class: BeHappy\SyliusCompanyDataPlugin\Menu\CompanyDataMenuBuilder
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addItem }

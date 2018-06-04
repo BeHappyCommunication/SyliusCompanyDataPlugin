@@ -1,0 +1,4 @@
+imports:
+    - { resource: services.yml }
+    - { resource: resources.yml }
+    - { resource: grids.yml }

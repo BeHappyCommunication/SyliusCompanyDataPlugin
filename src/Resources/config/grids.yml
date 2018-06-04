@@ -1,0 +1,26 @@
+sylius_grid:
+    grids:
+        behappy_company_data_plugin.company_data:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: '%behappy_company_data_plugin.model.company_data.class%'
+                    repository:
+                        method: createListQueryBuilder
+            fields:
+                name:
+                    type: string
+                    label: 'behappy_company_data_plugin.ui.grid.name'
+                    sortable: ~
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

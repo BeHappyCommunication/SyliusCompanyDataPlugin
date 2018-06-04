@@ -1,0 +1,19 @@
+behappy_company_data_plugin:
+    ui:
+        company_datas: 'Données société'
+        new_company_data: 'Ajouter des données sur une société'
+        edit_company_data: 'Modifier des données sur une société'
+        manage_company_data: 'Gestion des données de sociétés'
+        grid:
+            name: 'Nom'
+        form:
+            name: 'Nom de la société'
+            address_number: 'Numéro de rue'
+            address_street: 'Nom de la rue'
+            address_street_extension: 'Extension de rue'
+            address_zip_code: 'Code postal'
+            address_country: 'Pays'
+            vat_number: 'Numéro TVA'
+            siret: 'Numéro de SIRET'
+            information: 'Informations supplémentaires'
+            channels: 'Canaux de vente'

@@ -1,0 +1,3 @@
+behappy_company_data_plugin:
+    resource: routing/admin.yml
+    prefix: /admin

@@ -1,0 +1,4 @@
+services:
+    behappy_company_data_plugin:
+        class: BeHappy\SyliusCompanyDataPlugin\Resolver\CompanyDataResolver
+        arguments: [ '@behappy_company_data_plugin.repository.company_data' ]
