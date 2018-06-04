@@ -1,6 +1,8 @@
 # sylius-company-data-plugin
 Provides a way to create datas for your selling company on Sylius.
 
+This plugin does not provide any useful functionality as is. It is a dependency point for other plugins. 
+
 # Installation-procedure
 ```bash
 $ composer require behappy/company-data-plugin
@@ -49,7 +51,7 @@ php bin/console doctrine:schema:update --dump-sql --force
 # That's it !
 You now have a new entry in Admin under configuration tab : Company data
 
-There you can configure yout company(ies) data(s) in order to be used by other plugins.
+There you can configure your company(ies) data(s) in order to be used by other plugins.
 
 # Thanks
 This plugin is partially inspired by BitBagCommerce/SyliusInvoicingPlugin (https://github.com/BitBagCommerce/SyliusInvoicingPlugin).
