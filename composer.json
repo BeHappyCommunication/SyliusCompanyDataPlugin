@@ -1,8 +1,22 @@
 {
-    "name": "sylius/plugin-skeleton",
+    "name": "behappy/company-data-plugin",
     "type": "sylius-plugin",
-    "description": "Acme example plugin for Sylius.",
+    "description": "Provides a way to create datas for your selling company on Sylius.",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "BeHappy Communication",
+            "role": "Organization",
+            "homepage": "http://www.behappycom.com",
+            "email": "projets@behappycom.com"
+        },
+        {
+            "name": "Stéphane DECOCK",
+            "role": "Developer",
+            "homepage": "http://www.behappycom.com",
+            "email": "s.decock@behappycom.com"
+        }
+    ],
     "require": {
         "php": "^7.1",
 
@@ -30,8 +44,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusExamplePlugin\\": "src/",
-            "Tests\\Acme\\SyliusExamplePlugin\\": "tests/"
+            "BeHappy\\SyliusCompanyDataPlugin\\": "src/"
         }
     },
     "autoload-dev": {
