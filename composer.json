@@ -15,6 +15,12 @@
             "role": "Developer",
             "homepage": "http://www.behappycom.com",
             "email": "s.decock@behappycom.com"
+        },
+        {
+            "name": "Jordan BAO",
+            "role": "Developer",
+            "homepage": "http://www.behappycom.com",
+            "email": "j.bao@behappycom.com"
         }
     ],
     "require": {
