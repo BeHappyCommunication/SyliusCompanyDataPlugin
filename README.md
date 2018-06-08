@@ -34,7 +34,7 @@ imports:
 # in routing.yml
 ...
 
-behappy_mail_plugin:
+behappy_company_data_plugin:
     resource: '@BeHappySyliusCompanyDataPlugin/Resources/config/routing.yml'
 ...
 ```
