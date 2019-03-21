@@ -31,6 +31,8 @@ class BaseCompanyData implements BaseCompanyDataInterface
     protected $siret = '';
     /** @var string */
     protected $information = '';
+    /** @var string */
+    protected $addressCity = '';
     
     /**
      * @return int
@@ -190,5 +192,21 @@ class BaseCompanyData implements BaseCompanyDataInterface
     public function setInformation(?string $information): void
     {
         $this->information = $information;
+    }
+    
+    /**
+     * @return string
+     */
+    public function getAddressCity(): ?string
+    {
+        return $this->addressCity;
+    }
+    
+    /**
+     * @param string $addressCity
+     */
+    public function setAddressCity(?string $addressCity): void
+    {
+        $this->addressCity = $addressCity;
     }
 }
