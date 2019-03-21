@@ -39,6 +39,9 @@ final class CompanyDataType extends AbstractResourceType
             ->add('addressCountry', TextType::class, [
                 'label' => 'behappy_company_data_plugin.ui.form.address_country'
             ])
+            ->add('addressCity', TextType::class, [
+                'label' => 'behappy_company_data_plugin.ui.form.address_city'
+            ])
             ->add('vatNumber', TextType::class, [
                 'label' => 'behappy_company_data_plugin.ui.form.vat_number'
             ])
