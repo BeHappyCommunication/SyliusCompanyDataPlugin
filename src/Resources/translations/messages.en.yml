@@ -12,6 +12,7 @@ behappy_company_data_plugin:
             address_street: 'Street'
             address_street_extension: 'Street extension'
             address_zip_code: 'Zip code'
+            address_city: 'City'
             address_country: 'Country'
             vat_number: 'VAT Number'
             siret: 'SIRET'
