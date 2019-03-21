@@ -41,3 +41,7 @@ BeHappy\SyliusCompanyDataPlugin\Entity\BaseCompanyData:
         information:
             type: text
             nullable: true
+        addressCity:
+            type: string
+            nullable: false
+            length: 255
